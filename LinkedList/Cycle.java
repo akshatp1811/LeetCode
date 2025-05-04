@@ -11,9 +11,18 @@ public class Cycle {
                  next = null;
              }
          }
+
          public boolean hasCycle(ListNode head) {
             ListNode fast = head;
             ListNode slow = head;
-        }
-        return false;
+            while (fast != null && fast != slow) {
+                fast = fast.next.next;
+                slow = slow.next;
+            }
+            if (fast == slow) {
+                return true;
+            }
+            else
+            return false;
      }
+}

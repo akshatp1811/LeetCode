@@ -11,7 +11,7 @@ public class Cycle {
                  next = null;
              }
          }
-
+        public void insert(List)
          public boolean hasCycle(ListNode head) {
             ListNode fast = head;
             ListNode slow = head;

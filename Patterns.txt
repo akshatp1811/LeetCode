@@ -1,0 +1,21 @@
+Estimated Distribution of Interview Questions by Pattern
+---------------------------------------------------------
+
+Pattern / Topic                 | % of Questions | Common Use Cases
+-------------------------------|----------------|-----------------------------------------------
+Sliding Window                 | 10–12%         | Substrings, subarrays, optimizations on strings
+Two Pointers                  | 10–15%         | Palindromes, sorted arrays, merge problems
+Fast & Slow Pointers          | 5–7%           | Linked list cycles, middle of list
+Binary Search (incl. BS on Ans)| 10–12%        | Peak finding, k-th element, search problems
+Hashing (Map/Set)             | 10–15%         | Frequency count, duplicates, anagrams
+Prefix Sum / Difference Array | 4–6%           | Subarrays, range sum, efficient updates
+Dynamic Programming           | 15–20%         | Subset sum, LCS, LIS, grid/array DP
+Backtracking                  | 7–10%          | Permutations, combinations, N-Queens
+Greedy                        | 8–10%          | Intervals, scheduling, local vs global
+Heap / Priority Queue         | 5–7%           | Top K, merging, Dijkstra’s algorithm
+Graph Algorithms (DFS/BFS)    | 10–15%         | Islands, shortest path, graph traversal
+Union-Find / Disjoint Set     | 2–4%           | Kruskal's MST, connected components
+Trie                          | 2–4%           | Word search, autocomplete
+Bit Manipulation              | 3–5%           | XOR, bitmasking, subsets
+Monotonic Stack / Queue       | 3–5%           | Stock span, next greater element
+Recursion + Memoization       | 5–7%           | DFS-based problems with repeated subproblems

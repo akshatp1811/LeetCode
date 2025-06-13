@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class BalancedParenthesis {
-    String str = "({[})]";
+    String str = "[(]";
     Stack<Character> stack = new Stack<>();
     public boolean isBalanced = true;
 
@@ -33,7 +33,14 @@ public class BalancedParenthesis {
                 }
             }
         }
-        return isBalanced; // fixed: variable name was isbalanced
+        if (stack.isEmpty() == true) {
+            isBalanced = true;   
+        }
+        else{
+            isBalanced = false;
+        }
+
+        return isBalanced; 
     }
 
     public static void main(String[] args) {

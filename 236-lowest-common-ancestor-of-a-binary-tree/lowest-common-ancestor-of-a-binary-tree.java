@@ -8,50 +8,33 @@
  * }
  */
 class Solution {
-
-    // Finds the path from root to target node
-    private boolean findPath(TreeNode root, TreeNode target, List<TreeNode> path) {
-
-        if (root == null)
+    public boolean findPath(TreeNode root, TreeNode target, List<TreeNode> path)
+    {
+        if(root == null)
             return false;
-
-        // Add current node to the path
         path.add(root);
-
-        // Target found
-        if (root == target)
+        if(root == target)
             return true;
-
-        // Search in left or right subtree
-        if (findPath(root.left, target, path) ||
-            findPath(root.right, target, path)) {
+        //if we get the target in either of the left or right subtree we return true
+        if(findPath(root.left,target,path) || findPath(root.right,target,path))
             return true;
-        }
-
-        // Target not found in this subtree, backtrack
+        
+        //if target is not found in anu subtree then return back
         path.remove(path.size() - 1);
         return false;
+        //since the same path array is going across the functions so if we dont find the value we delete from the path--this is an important point which i did not understood.
     }
-
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-
         List<TreeNode> pathP = new ArrayList<>();
         List<TreeNode> pathQ = new ArrayList<>();
-
-        // Find paths to both nodes
-        findPath(root, p, pathP);
-        findPath(root, q, pathQ);
-
+        findPath(root,p,pathP);
+        findPath(root,q,pathQ);
         int i = 0;
-
-        // Compare the paths
         while (i < pathP.size() &&
                i < pathQ.size() &&
                pathP.get(i) == pathQ.get(i)) {
             i++;
         }
-
-        // Last common node
-        return pathP.get(i - 1);
+        return pathP.get(i-1);
     }
 }

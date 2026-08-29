@@ -22,12 +22,9 @@ class Solution {
                     return false;
                 }
 
-                // firstPos < secondPos, so this pair is sorted
                 break;
             }
 
-            // If all common characters were equal,
-            // the shorter word must come first.
             if (i == words[second].length() && 
                 words[first].length() > words[second].length()) {
                 return false;
